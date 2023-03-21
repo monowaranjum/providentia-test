@@ -29,22 +29,3 @@ ddg.attr(label="\n\nData Dependency Graph\n Of Current Program")
 ddg.attr(fontsize='20')
 
 ddg.view()
-
-
-pg = graphviz.Digraph('PG', filename = 'prov_g.gv')
-pg.node("process_name", label="Artifact:Process\nprocess_name")
-pg_created_set = set()
-pg_created_set.add("process_name")
-with open("prov_edges.txt", "r") as prov_file:
-    for line in prov_file:
-        data = line.split(",")
-        if data[2] not in pg_created_set:
-            pg.node(data[2], label="Artifact:"+data[1]+":"+data[2])
-            pg_created_set.add(data[2])
-        pg.edge("process_name",data[2],label=data[0])
-
-pg.attr(label="\n\nProvenance Graph\n Of Current Program")
-pg.attr(fontsize='20')
-
-pg.view()        
-        

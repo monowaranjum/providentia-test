@@ -43,8 +43,8 @@ The goal of this part is to generate the relevant functions table we mentioned a
 Single Statment| Complete| None
 If-Else| Complete| None
 For Loop| Complete| None
-While Loop| Incomplete| ```while(true)```
-Do-While Loop| Incomplete| Currently buggy and require deeper analysis
+While Loop| Complete| None
+Do-While Loop| Complete| None
 Switch Statement| Not Started Yet| N/A 
 Pointer| Out of scope| N/A
 
@@ -78,7 +78,8 @@ close| 3| Argument 0| Used or WasGeneratedBy
 - Install pygraphviz (To visualize the output graphs in python): ```pip install graphviz```
 
 
-## Building the pass:
+## Building the pass: Use the build.sh script
+- Alternatively, follow the steps below.
 - Clone the repository using: ```git clone <repo-url>```
 - Navigate to the repository root directory
 - Execute the following commands. (Please note that your system should have Cmake Version 3.1 or higher to build the project.)
