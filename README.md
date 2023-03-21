@@ -93,6 +93,13 @@ close| 3| Argument 0| Used or WasGeneratedBy
 
 # Running the Analysis
 
+### Option 1: 
+- Navigate to the Test Directory
+- Modify Existing Test Files or create your own test file.
+- Return to the root directory and run: ```./run.sh <filename>```
+
+### Option 2 (Outdated) :
+
 - Navigate to the directory of the source code you want to analyze. Lets call it ```test.c```
 - Run this command: ```clang -S -emit-llvm -o test.ll test.c``` 
 - This will create a ```test.ll``` file in the same directory.
